@@ -152,12 +152,12 @@ body, html {
 
 /* Show the panel that matches the URL hash (e.g., ://website.com) */
 .panel:target {
-  display: block;
+  display: flex;
 }
 
 /* Optional: Keep the first item visible when the page first loads without a hash */
 .panel:first-of-type {
-  display: block;
+  display: flex;
 }
 /* Hide the first item if another item becomes the active target */
 .panel:has(~ .panel:target), 
