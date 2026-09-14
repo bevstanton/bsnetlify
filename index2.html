@@ -144,7 +144,25 @@ body, html {
 		100%	         {background-color: #49FF69;}
 ;}
 	}
+/* Hide all panels by default */
+.panel {
+  display: none;
+}
 
+/* Show the panel that matches the URL hash (e.g., ://website.com) */
+.panel:target {
+  display: block;
+}
+
+/* Optional: Keep the first item visible when the page first loads without a hash */
+.panel:first-of-type {
+  display: block;
+}
+/* Hide the first item if another item becomes the active target */
+.panel:has(~ .panel:target), 
+body:has(.panel:target) .panel:first-of-type {
+  display: none;
+}
 	
 </style>
     </head>
@@ -221,10 +239,12 @@ tactile sensation that is sometimes missing when working in recording software.<
   <source src="glitch-cats.mp4" type="video/mp4" poster="glitch-cats.jpg">
 </video>
 <div class="bgimg">
-  <div id="home" class="middle tab-content">
+<div class="content-panels">
+	
+  <div id="home" class="middle panel">
 	  <img src="nbclogo-black-rnd.png" alt="logo" class="w3-image w3-circle rotate-in-center" >    
 	    </div>
-  <div id="about" class="tab-content" style="display: none;">
+  <div id="about" class="panel">
 
 	    <div class="w3-row w3-black">
 	      	    <div class="w3-half w3-padding-top-48">
@@ -248,11 +268,11 @@ tactile sensation that is sometimes missing when working in recording software.<
  
 	    </div>
 
-	  <div id="contact" class="tab-content" style="display: none;">
+	  <div id="contact" class="panel">
 
 <iframe data-tally-src="https://tally.so/embed/eqV95q?dynamicHeight=1" loading="lazy" width="100%" height="821" frameborder="0" marginheight="0" marginwidth="0" title="Contact neon.bev.CliCk"></iframe>
 <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-		  
+	  </div> 
 	    </div>
 	
 <div class="footer blinkingBackground">
@@ -278,28 +298,7 @@ function w3_close() {
     mySidebar.style.display = "none";
 }
 </script>
-<script>
 
-document.getElementById('nav').addEventListener('click', function(e) {
-  // Make sure a navigation link was clicked
-  if (e.target.classList.contains('nav-link')) {
-    e.preventDefault(); // Prevent page from jumping down
-
-    // 1. Remove 'active' class from all links and add to clicked link
-    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-    e.target.classList.add('active');
-
-    // 2. Hide all content divs
-    document.querySelectorAll('.tab-content').forEach(div => div.style.display = 'none');
-
-    // 3. Show the targeted div using its ID from href
-    const targetId = e.target.getAttribute('href'); // returns '#home', '#about', etc.
-    document.querySelector(targetId).style.display = 'block';
-  }
-});
-
-	
-</script>
 
 	
 </body>
