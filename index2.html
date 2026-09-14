@@ -38,6 +38,7 @@ body, html {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+	z-index: -1
 }
 .bgimg {
  /* background-image: url('glitch-cats.jpg');*/
@@ -146,7 +147,7 @@ body, html {
 ;}
 	}
 /* Hide all panels by default */
-.panel {
+/* .panel {
   display: none;
 }
 
@@ -163,7 +164,7 @@ body, html {
 .panel:has(~ .panel:target), 
 body:has(.panel:target) .panel:first-of-type {
   display: none;
-}
+}*/
 	
 </style>
     </head>
@@ -214,15 +215,18 @@ body:has(.panel:target) .panel:first-of-type {
 <video autoplay muted loop id="myVideo">
   <source src="glitch-cats.mp4" type="video/mp4" poster="glitch-cats.jpg">
 </video>
-	  	<div class="bgimg">
-  <div id="home" class="middle panel">
-	  <img src="nbclogo-black-rnd.png" alt="logo" class="w3-image w3-circle rotate-in-center" >    
-        </div>
 
-  <div id="about" class="middle panel">
+	<section id="home">
+	  	<div class="bgimg">
+			  <div class="middle">
+  	  <img src="nbclogo-black-rnd.png" alt="logo" class="w3-image w3-circle rotate-in-center" > 
+			  </div>
+        </div>
+     <section id="about">
+		 	  	<div class="middle">
 	    <div class="w3-row w3-black">
 	      	    <div class="w3-half w3-padding-top-48">
-	<div class="w3-display-container">		    			    
+	    <div class="w3-display-container">		    			    
 	      <img src="nbc-bio.jpg"  class="w3-image">
 		  <div class="w3-display-bottomleft w3-container w3-small">Photo by Joe Wall</div>
 		    </div>
@@ -237,22 +241,26 @@ in the late 90s that she has retr0brighted for the occasion. Performing DAWless 
 sets keeps Stanton in the inspiration part of the creative process and provides the
 tactile sensation that is sometimes missing when working in recording software.</p>
 		    </div>
-
 	      </div>
-			     </div>
+				</div>
+			     </section>
 
- <div id="music" class="middle panel">
+ <section id="music">
+	 	  	<div class="middle">
 <div class="w3-container w3-black w3-padding-large">
 	<h2>Available At:</h2>
 </div>
- </div>
+			</div>
+ </section>
 
-	  <div id="contact" class="middle panel">
+	  <section id="contact">
+		  	 	  	<div class="middle">
 <div class="w3-container w3-black">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdB2dqS4PtazrIRuvol6ynlzrx6ybdifMnd9uXywA4B1RSPeQ/viewform?embedded=true" width="640" height="722" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<b3>Contact</b3>
 </div>	
+</div>
 	  
-		</div> 
+
 
 	
 <div class="footer blinkingBackground">
