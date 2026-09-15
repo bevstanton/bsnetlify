@@ -40,8 +40,13 @@ body {
 body, html {
     height: calc(100% - 43px);
     margin: 0;
+	scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
-section {height:100dvh;}
+section {
+	height:100dvh;
+	scroll-snap-align: start;
+}
 	
  body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Orbitron', sans-serif;
