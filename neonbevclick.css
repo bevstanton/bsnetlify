@@ -17,4 +17,4 @@ body {
 }
 .night, .dark 
 {color-scheme: normal;}
-img {opacity: 0 !important;}
+img {opacity: 0.5 !important;}
