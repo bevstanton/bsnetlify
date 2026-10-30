@@ -12,3 +12,8 @@ ul.playlist li .player-link {margin-top: 7px;}
 body:after {background: transparent !important}
 body {
     background: transparent !important;}
+.bg-mat {
+    background-color: transparent !important;
+}
+.night, .dark 
+{color-scheme: none;}
