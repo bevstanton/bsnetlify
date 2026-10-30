@@ -17,4 +17,8 @@ body {
 }
 .night, .dark 
 {color-scheme: normal;}
-img {opacity: 0.5 !important;}
+.size-full {
+    width: 120px;
+    height: 120px;
+}
+.object-cover {none;}
